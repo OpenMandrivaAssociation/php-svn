@@ -6,7 +6,7 @@
 Summary:	PHP Bindings for the Subversion Revision control system
 Name:		php-%{modname}
 Version:	0.2
-Release:	%mkrel 10
+Release:	%mkrel 11
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/svn
@@ -29,6 +29,15 @@ perl -pi -e "s|apr-0|apr-1|g" config.m4
 perl -pi -e "s|apache2|apache|g" config.m4
 
 %build
+export CFLAGS="%{optflags}"
+export CXXFLAGS="%{optflags}"
+export FFLAGS="%{optflags}"
+
+%if %mdkversion >= 200710
+export CFLAGS="$CFLAGS -fstack-protector"
+export CXXFLAGS="$CXXFLAGS -fstack-protector"
+export FFLAGS="$FFLAGS -fstack-protector"
+%endif
 
 export CPPFLAGS="`apr-1-config --cppflags`"
 
@@ -58,5 +67,3 @@ EOF
 %doc examples CREDITS EXPERIMENTAL package*.xml 
 %config(noreplace) %attr(0644,root,root) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
