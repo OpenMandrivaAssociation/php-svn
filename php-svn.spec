@@ -14,7 +14,6 @@ Source0:	http://pecl.php.net/get/%{modname}-%{version}.tar.bz2
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	subversion-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 PHP Bindings for the Subversion Revision control system.
