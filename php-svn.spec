@@ -5,7 +5,7 @@
 
 Summary:	PHP Bindings for the Subversion Revision control system
 Name:		php-%{modname}
-Version:	0.4
+Version:	0.4.1
 Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
@@ -40,7 +40,7 @@ phpize
 mv modules/*.so .
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot} 
+rm -rf %{buildroot} 
 
 install -d %{buildroot}%{_libdir}/php/extensions
 install -d %{buildroot}%{_sysconfdir}/php.d
@@ -64,7 +64,7 @@ if [ "$1" = "0" ]; then
 fi
 
 %clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 %files 
 %defattr(-,root,root)
