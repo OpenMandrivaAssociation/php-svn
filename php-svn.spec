@@ -6,7 +6,7 @@
 Summary:	PHP Bindings for the Subversion Revision control system
 Name:		php-%{modname}
 Version:	0.5.0
-Release:	%mkrel 5
+Release:	%mkrel 6
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/svn
