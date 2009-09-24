@@ -5,14 +5,13 @@
 
 Summary:	PHP Bindings for the Subversion Revision control system
 Name:		php-%{modname}
-Version:	0.5.0
-Release:	%mkrel 7
+Version:	0.5.1
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/svn
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 Patch0:		svn-0.5.0-format_not_a_string_literal_and_no_format_arguments.diff
-Patch1:		svn-0.5.0-svn16x_fix.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	subversion-devel
@@ -27,7 +26,6 @@ PHP Bindings for the Subversion Revision control system.
 [ "../package*.xml" != "/" ] && mv ../package*.xml .
 
 %patch0 -p0
-%patch1 -p0
 
 # instead of a patch
 perl -pi -e "s|apr-0|apr-1|g" config.m4
