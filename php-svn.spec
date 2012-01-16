@@ -11,7 +11,7 @@ Group:		Development/PHP
 License:	PHP License
 URL:		http://pecl.php.net/package/svn
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
-Patch0:		svn-0.5.0-format_not_a_string_literal_and_no_format_arguments.diff
+Patch0:		svn-1.0.1-svn_fixes.diff
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	apache-devel >= 2.2.0
 BuildRequires:	subversion-devel
