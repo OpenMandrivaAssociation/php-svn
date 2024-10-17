@@ -9,7 +9,7 @@ Version:	1.0.2
 Release:	3
 Group:		Development/PHP
 License:	PHP License
-URL:		http://pecl.php.net/package/svn
+URL:		https://pecl.php.net/package/svn
 Source0:	http://pecl.php.net/get/%{modname}-%{version}.tgz
 BuildRequires:	php-devel >= 3:5.2.0
 BuildRequires:	apache-devel >= 2.2.0
